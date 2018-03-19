@@ -1,0 +1,13 @@
+- git clone https://github.com/miloradostojic/exchange.git
+- set your environment hosts files
+- create mysql database
+- remove .example from .env.example name
+- run " php artisan key:generate " 
+- edit .env for your connection to your mysql database
+- edit .env for your mail host 
+- run " php artisan config:cache " 
+- run migrations "php artisan migrate"
+- run seed "php artisan db:seed"
+- run your cron job schedule " * * * * * php /path-to-your-project/artisan schedule:run >> /dev/null 2>&1 "
+  (or test it manualy "php artisan CronJob:cronjob")
+- run web service in browser
